@@ -2,6 +2,8 @@
 
 **이 레포지토리는 매우 쉬운 CTF 입문 문제들을 관리합니다. 서버에 설치할 수도 있고, Docker 로 편하게 시작할 수도 있습니다.**
 
+첫번째 단계 아이디 : **bof1**, 비밀번호 : **bof1** 
+
 ## Docker
 
 ```shell
@@ -15,22 +17,22 @@ Start `ccss17/bof` with `-it --privileged` option.
 Execute the following commands for setting bof CTF environment.
 
 ```shell
-git clone https://github.com/ccss17/bof
-cd bof
-./setup.sh
+$ git clone https://github.com/Global-Handong-Oriented-Security-Team/bof
+$ cd bof
+$ ./setup.sh
 ```
 
 To uninstall bof CTF environment, run `setup.sh` again with `--remove` option.
 
 ```shell
-./setup.sh --remove
+$ ./setup.sh --remove
 ```
 
 Check created bof users and their passwords
 
 ```shell
-tail -n12 /etc/passwd
-cat PASSWORDS
+$ tail -n12 /etc/passwd
+$ cat PASSWORDS
 ```
 
 ![check](https://user-images.githubusercontent.com/16812446/72774687-eaa4b580-3c4e-11ea-895e-b59762c8baf6.PNG)
