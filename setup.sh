@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -xe
+
 FINAL_STAGE=13
 ASLR_ON="11"
 FIRST_PASSWORD="bof1"

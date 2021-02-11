@@ -33,7 +33,7 @@ RUN cd ~ \
     && ./install.sh \
     && ./install_reversing.sh \
     && cd ~ \
-    && git clone -q https://github.com/ccss17/bof \
+    && git clone -q https://github.com/Global-Handong-Oriented-Security-Team/bof \
     && cd bof \
     && ./setup.sh \
     && rm -rf ~/bof
