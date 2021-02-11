@@ -43,8 +43,8 @@ setting_ctf() {
             echo "/home/$USER/.aslr 2 2>&1 > /dev/null" | $SUDO tee /home/$USER/.bashrc
         fi
         $SUDO echo "export LANG=en_US.UTF-8" >> /home/$USER/.bashrc
-        if [ $1 = 10 ] || [$1 = 12]; then
-            POC="exp_bof$USER.py"
+        if [[ $1 == 10 || $1 == 12 ]]; then
+            POC="exp_$USER.py"
             $SUDO cp $POC /home/$USER
             $SUDO chown $USER:$USER /home/$USER/$POC
         fi

@@ -1,7 +1,14 @@
-### 이 레포지토리는 관리되지 않습니다. 이제 https://github.com/Global-Handong-Oriented-Security-Team/bof 에서 관리됩니다.
 # bof (ctf easy tutorial)
 
 **이 레포지토리는 매우 쉬운 CTF 입문 문제들을 관리합니다. 서버에 설치할 수도 있고, Docker 로 편하게 시작할 수도 있습니다.**
+
+## Docker
+
+```shell
+$ docker run -it --privileged ccss17/bof
+```
+
+Start `ccss17/bof` with `-it --privileged` option.
 
 ## Setup BOF CTF
 
@@ -33,11 +40,3 @@ First CTF stage is `bof1`. Login with ID `bof1` and password `bof1`.
 ![check2](https://user-images.githubusercontent.com/16812446/72774697-f3958700-3c4e-11ea-820d-2b86ab92620e.PNG)
 
 Then exploit `bof1` to get password of `bof2` in `bof2.pw`.
-
-## Docker
-
-```shell
-$ docker run -it --privileged ccss17/bof
-```
-
-Start `ccss17/bof` with `-it --privileged` option.

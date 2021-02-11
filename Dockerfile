@@ -19,11 +19,13 @@ ENV LC_ALL en_US.UTF-8
 
 RUN yes | unminimize
 RUN set -xe \ 
-    && apt -qq update --fix-missing && apt -y -qq upgrade
-RUN apt -y -qq install vim tmux perl wget tar man sudo 
-RUN apt -y -qq install adduser netstat-nat net-tools curl w3m git build-essential xxd file make 
-RUN apt -y -qq install python3-pip zlib1g libjpeg8-dev zlib1g-dev 
-RUN apt -y -qq install libcurses-perl nyancat sl python 
+    && apt -qq update --fix-missing && apt -y -qq upgrade \
+    && apt -y -qq install vim tmux perl wget tar man sudo adduser netstat-nat net-tools curl w3m git build-essential xxd file make python3-pip zlib1g libjpeg8-dev zlib1g-dev libcurses-perl nyancat sl python \
+    && git clone https://github.com/JonathanSalwan/ROPgadget \
+    && sed -i 's/python/python3/g' ROPgadget/ROPgadget.py \
+    && cp ROPgadget/ROPgadget.py /usr/local/bin/ \
+    && python3 -m pip -q install --upgrade pip \
+    && python3 -m pip -q install --upgrade git+https://github.com/Gallopsled/pwntools.git@dev
 
 RUN cd ~ \
     && git clone -q https://github.com/ccss17/dotfiles-cli \
