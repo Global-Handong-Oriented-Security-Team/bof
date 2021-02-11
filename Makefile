@@ -2,7 +2,7 @@ SOURCES := $(wildcard *.c)
 BINARIES := $(SOURCES:%.c=%)
 CC=gcc
 
-all: aslr _bof1 _bof2 _bof3 _bof4 _bof5 _bof6 _bof7 _bof8 _bof9 _bof10 _bof11
+all: aslr _bof1 _bof2 _bof3 _bof4 _bof5 _bof6 _bof7 _bof8 _bof9 _bof10 _bof11 _bof12
 aslr: aslr.c
 	$(CC) $< -o $@
 _bof1: _bof1.c
