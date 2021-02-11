@@ -17,7 +17,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
-RUN yes | unminimize
+RUN yes | un
 RUN set -xe \ 
     && apt -qq update --fix-missing && apt -y -qq upgrade \
     && apt -y -qq install vim tmux perl wget tar man sudo adduser netstat-nat net-tools curl w3m git build-essential xxd file make python3-pip zlib1g libjpeg8-dev zlib1g-dev libcurses-perl nyancat sl python \
